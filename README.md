@@ -1,3 +1,17 @@
+# Mis Regalos 🎁
+
+> Metabuscador de regalos y listas colaborativas
+
+Este proyecto está desarrollado con:
+
+- **Next.js 15 + TypeScript**
+- **Tailwind CSS + shadcn/ui**
+- **Supabase (auth + DB + storage)**
+- **Sonner (toasts)**
+- **ESLint + Prettier + Husky**
+
+Versión inicial: `v0.0.0`
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
