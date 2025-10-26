@@ -3,10 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev --turbo",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{js,ts,tsx,css,md}\"",
+    "format:check": "prettier -c \"**/*.{js,ts,tsx,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "lint:staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": ["prettier --write", "eslint --fix"],
+    "*.{css,md}": ["prettier --write"]
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
@@ -33,8 +41,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.3",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^15.5.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4.1.16",
     "tw-animate-css": "^1.3.8",
     "typescript": "^5"
